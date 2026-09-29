@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="1050.0"
+            stylesheets="@styles.css"
+            xmlns="http://javafx.com/javafx/13"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="18" styleClass="header">
+            <padding><Insets top="18" right="25" bottom="18" left="25"/></padding>
+            <Button styleClass="back-button" text="← Volver" onAction="#goBack"/>
+            <VBox>
+                <Label styleClass="title-small" text="Salida y pago"/>
+                <Label styleClass="subtitle" text="Cierre el tiquete, calcule el monto y registre el método de pago."/>
+            </VBox>
+        </HBox>
+    </top>
+    <center>
+        <HBox spacing="24">
+            <padding><Insets top="28" right="30" bottom="30" left="30"/></padding>
+            <VBox HBox.hgrow="ALWAYS" spacing="12" styleClass="panel">
+                <Label styleClass="section-title" text="Tiquetes pendientes"/>
+                <TableView fx:id="tblTickets" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colTicket" prefWidth="75" text="#"/>
+                        <TableColumn fx:id="colPlate" prefWidth="100" text="Placa"/>
+                        <TableColumn fx:id="colSpace" prefWidth="90" text="Espacio"/>
+                        <TableColumn fx:id="colEntry" prefWidth="160" text="Entrada"/>
+                        <TableColumn fx:id="colStatus" prefWidth="185" text="Estado"/>
+                    </columns>
+                </TableView>
+            </VBox>
+            <VBox prefWidth="335" spacing="13" styleClass="panel">
+                <Label styleClass="section-title" text="Detalle y cobro"/>
+                <Label fx:id="lblSelectedTicket" styleClass="strong-label" text="Ningún tiquete seleccionado" wrapText="true"/>
+                <HBox spacing="8">
+                    <Label text="Monto base:"/>
+                    <Label fx:id="lblBaseAmount" styleClass="money" text="₡0"/>
+                </HBox>
+                <HBox spacing="8">
+                    <Label text="Total con ajuste:"/>
+                    <Label fx:id="lblTotalAmount" styleClass="money" text="₡0"/>
+                </HBox>
+                <Button fx:id="btnCloseTicket" maxWidth="1.7976931348623157E308" styleClass="secondary-button" text="Cerrar tiquete / calcular salida" onAction="#closeSelectedTicket"/>
+                <Label text="Método de pago"/>
+                <ComboBox fx:id="cmbPaymentType" maxWidth="1.7976931348623157E308"/>
+                <Label fx:id="lblData1" text="Monto recibido (₡)"/>
+                <TextField fx:id="txtData1"/>
+                <Label fx:id="lblData2" text="Referencia"/>
+                <TextField fx:id="txtData2"/>
+                <Button fx:id="btnPay" maxWidth="1.7976931348623157E308" styleClass="primary-button" text="Registrar pago" onAction="#paySelectedTicket"/>
+                <Label wrapText="true" styleClass="help-text" text="Tarjeta aplica 2% de ajuste. SINPE Móvil aplica 1% de descuento, según las reglas ya programadas en el proyecto."/>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

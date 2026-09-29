@@ -1,15 +1,14 @@
 package una.cr.proyecto2_paradigmas_gestionparqueo;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 /**
- * JavaFX App
+ * JavaFX application entry point.
  */
 public class App extends Application {
 
@@ -17,7 +16,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("dashboard"), 1050, 700);
+        stage.setTitle("Sistema de Gestión de Parqueo");
+        stage.setMinWidth(900);
+        stage.setMinHeight(620);
         stage.setScene(scene);
         stage.show();
     }
@@ -34,5 +36,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 }

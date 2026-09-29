@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="1050.0"
+            stylesheets="@styles.css"
+            xmlns="http://javafx.com/javafx/13"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="18" styleClass="header">
+            <padding><Insets top="18" right="25" bottom="18" left="25"/></padding>
+            <Button styleClass="back-button" text="← Volver" onAction="#goBack"/>
+            <VBox>
+                <Label styleClass="title-small" text="Administrar espacios"/>
+                <Label styleClass="subtitle" text="Consulte ocupación y cambie el estado de espacios disponibles."/>
+            </VBox>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="18">
+            <padding><Insets top="28" right="30" bottom="30" left="30"/></padding>
+            <HBox alignment="CENTER" spacing="18">
+                <HBox spacing="7" styleClass="mini-card"><Label text="Disponibles:"/><Label fx:id="lblAvailable" styleClass="strong-label" text="0"/></HBox>
+                <HBox spacing="7" styleClass="mini-card"><Label text="Ocupados:"/><Label fx:id="lblOccupied" styleClass="strong-label" text="0"/></HBox>
+                <HBox spacing="7" styleClass="mini-card"><Label text="Fuera de servicio:"/><Label fx:id="lblOut" styleClass="strong-label" text="0"/></HBox>
+            </HBox>
+            <VBox VBox.vgrow="ALWAYS" spacing="12" styleClass="panel">
+                <TableView fx:id="tblSpaces" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colNumber" prefWidth="85" text="#"/>
+                        <TableColumn fx:id="colIdentifier" prefWidth="150" text="Identificador"/>
+                        <TableColumn fx:id="colType" prefWidth="180" text="Tipo"/>
+                        <TableColumn fx:id="colStatus" prefWidth="190" text="Estado"/>
+                        <TableColumn fx:id="colVehicle" prefWidth="190" text="Vehículo asignado"/>
+                    </columns>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" spacing="12">
+                    <Button fx:id="btnOutOfService" styleClass="danger-button" text="Poner fuera de servicio" onAction="#markOutOfService"/>
+                    <Button fx:id="btnReturnToService" styleClass="primary-button" text="Volver a servicio" onAction="#returnToService"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
