@@ -22,7 +22,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Car" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1416.0" yPosition="1898.0">
+    <Class name="Car" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1336.0" yPosition="1504.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public">
@@ -57,7 +57,7 @@
         <Method name="getAuthorizationCode" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="CargoVehicle" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2096.0" yPosition="1639.0">
+    <Class name="CargoVehicle" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="296.0" yPosition="2230.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public">
@@ -94,7 +94,7 @@
         <Method name="getChange" returnType="long" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="DashboardController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2926.0" yPosition="256.0">
+    <Class name="DashboardController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2701.0" yPosition="330.0">
       <Fields>
         <Field name="service" type="ParkingService" visibility="private" isFinal="true"/>
         <Field name="lblAvailable" type="Label" visibility="private"/>
@@ -111,7 +111,7 @@
         <Method name="openSpaces" returnType="void" visibility="private"/>
       </Methods>
     </Class>
-    <Class name="EntryController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1278.0" yPosition="395.0">
+    <Class name="EntryController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1017.0" yPosition="178.0">
       <Fields>
         <Field name="DATE_FORMAT" type="DateTimeFormatter" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="service" type="ParkingService" visibility="private" isFinal="true"/>
@@ -140,7 +140,7 @@
         <Method name="goBack" returnType="void" visibility="private"/>
       </Methods>
     </Class>
-    <Class name="Motorcycle" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1625.0" yPosition="591.0">
+    <Class name="Motorcycle" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="274.0" yPosition="1616.0">
       <Fields/>
       <Constructors>
         <Constructor visibility="public">
@@ -156,7 +156,7 @@
         <Method name="getDailyMaximum" returnType="int" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="ParkingRateRules" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2453.0" yPosition="489.0">
+    <Class name="ParkingRateRules" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2491.0" yPosition="136.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -166,7 +166,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ParkingService" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" isFinal="true" xPosition="3113.0" yPosition="603.0">
+    <Class name="ParkingService" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" isFinal="true" xPosition="3192.0" yPosition="421.0">
       <Fields>
         <Field name="INSTANCE" type="ParkingService" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="spaces" type="List&lt;ParkingSpace&gt;" visibility="private" isFinal="true"/>
@@ -217,7 +217,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ParkingSpace" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="3085.0" yPosition="1308.0">
+    <Class name="ParkingSpace" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="3230.0" yPosition="1388.0">
       <Fields>
         <Field name="number" type="int" visibility="private" isFinal="true"/>
         <Field name="identifier" type="String" visibility="private" isFinal="true"/>
@@ -249,7 +249,7 @@
         <Method name="getAssignedVehicle" returnType="Vehicle" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="ParkingTicket" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="749.0" yPosition="984.0">
+    <Class name="ParkingTicket" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="184.0" yPosition="819.0">
       <Fields>
         <Field name="number" type="int" visibility="private" isFinal="true"/>
         <Field name="vehicle" type="Vehicle" visibility="private" isFinal="true"/>
@@ -284,7 +284,7 @@
         <Method name="getAmount" returnType="long" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="PaymentController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2108.0" yPosition="840.0">
+    <Class name="PaymentController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2343.0" yPosition="648.0">
       <Fields>
         <Field name="DATE_FORMAT" type="DateTimeFormatter" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="service" type="ParkingService" visibility="private" isFinal="true"/>
@@ -427,7 +427,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Vehicle" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" isAbstract="true" xPosition="1441.0" yPosition="1403.0">
+    <Class name="Vehicle" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" isAbstract="true" xPosition="857.0" yPosition="2042.0">
       <Fields>
         <Field name="licensePlate" type="String" visibility="private" isFinal="true"/>
         <Field name="brand" type="String" visibility="private" isFinal="true"/>
@@ -463,21 +463,21 @@
         <Literal name="SINPE_MOBILE"/>
       </Literals>
     </Enum>
-    <Enum name="SpaceStatus" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="3548.0" yPosition="1487.0">
+    <Enum name="SpaceStatus" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="3648.0" yPosition="1784.0">
       <Literals>
         <Literal name="AVAILABLE"/>
         <Literal name="OCCUPIED"/>
         <Literal name="OUT_OF_SERVICE"/>
       </Literals>
     </Enum>
-    <Enum name="SpaceType" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2136.0" yPosition="500.0">
+    <Enum name="SpaceType" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="415.0" yPosition="1913.0">
       <Literals>
         <Literal name="MOTORCYCLE"/>
         <Literal name="CAR"/>
         <Literal name="CARGO"/>
       </Literals>
     </Enum>
-    <Enum name="TicketStatus" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1017.0" yPosition="1606.0">
+    <Enum name="TicketStatus" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="951.0" yPosition="1375.0">
       <Literals>
         <Literal name="ACTIVE"/>
         <Literal name="CLOSED"/>
@@ -487,71 +487,71 @@
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <HasRelation name="tblActiveTickets" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="tblSpaces" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.CardPayment" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod"/>
-    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.DashboardController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colStatus" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colType" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.Motorcycle" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle"/>
-    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.Car" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle"/>
-    <HasRelation name="colTicket" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="status" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.Car" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.Motorcycle" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingRateRules" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colEntry" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colEntry" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colType" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.CargoVehicle" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle"/>
-    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.CashPayment" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod"/>
-    <HasRelation name="colStatus" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colIdentifier" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="type" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colNumber" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="tblTickets" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colSpace" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colVehicle" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="assignedVehicle" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="vehicle" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.CargoVehicle" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentType" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="status" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingRateRules" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="rateRules" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingRateRules" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colTicket" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="spaces" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ParkingSpace&gt;"/>
-    <HasRelation name="colPlate" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.SinpeMobilePayment" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod"/>
-    <HasRelation name="colSpace" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="space" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colType" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colTicket" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colPlate" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="type" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentType" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="tickets" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ParkingTicket&gt;"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="INSTANCE" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.CashPayment" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="rateRules" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingRateRules" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="space" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="spaces" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ParkingSpace&gt;"/>
+    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.Motorcycle" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle"/>
+    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colTicket" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vehicle" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.Car" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.CargoVehicle" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle"/>
+    <HasRelation name="colEntry" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="type" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.Car" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.SinpeMobilePayment" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.CargoVehicle" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colStatus" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="status" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colPlate" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.Motorcycle" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colSpace" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="INSTANCE" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tblTickets" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colType" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.CardPayment" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="type" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentType" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingRateRules" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tickets" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ParkingTicket&gt;"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tblSpaces" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colNumber" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingRateRules" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colPlate" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="assignedVehicle" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colIdentifier" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colEntry" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colVehicle" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colSpace" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colStatus" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.DashboardController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
