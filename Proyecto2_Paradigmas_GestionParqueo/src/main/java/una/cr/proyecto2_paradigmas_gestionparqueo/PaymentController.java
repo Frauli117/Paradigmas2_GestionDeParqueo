@@ -13,6 +13,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
+/**
+ * Handles ticket closure, payment details, and payment registration.
+ */
 public class PaymentController {
 
     private static final DateTimeFormatter DATE_FORMAT =
@@ -53,6 +56,9 @@ public class PaymentController {
     @FXML
     private Button btnPay;
 
+    /**
+     * Initializes view controls and displays the current service data.
+     */
     @FXML
     private void initialize() {
         colTicket.setCellValueFactory(data ->
@@ -81,6 +87,10 @@ public class PaymentController {
         showTicket(null);
     }
 
+    /**
+     * Closes the selected active ticket and displays its hours and base charge.
+     * Displays a warning when selection or ticket closure is invalid.
+     */
     @FXML
     private void closeSelectedTicket() {
         ParkingTicket selected = tblTickets.getSelectionModel().getSelectedItem();
@@ -107,6 +117,10 @@ public class PaymentController {
         }
     }
 
+    /**
+     * Registers payment for the selected closed ticket and refreshes pending tickets.
+     * Displays the adjusted total and cash change, or a warning if payment fails.
+     */
     @FXML
     private void paySelectedTicket() {
         ParkingTicket selected = tblTickets.getSelectionModel().getSelectedItem();
@@ -151,6 +165,13 @@ public class PaymentController {
         }
     }
 
+    /**
+     * Creates a payment method using the selected type and entered details.
+     *
+     * @return the payment method described by the form
+     * @throws IllegalArgumentException if no payment type is selected
+     * @throws NumberFormatException if the cash amount cannot be parsed as a long integer
+     */
     private PaymentMethod createPaymentMethod() {
         String paymentType = cmbPaymentType.getValue();
         if (paymentType == null) {
@@ -168,6 +189,9 @@ public class PaymentController {
         }
     }
 
+    /**
+     * Clears payment inputs and configures their labels and visibility for the selected method.
+     */
     private void configurePaymentFields() {
         String paymentType = cmbPaymentType.getValue();
         txtData1.clear();
@@ -199,6 +223,11 @@ public class PaymentController {
         }
     }
 
+    /**
+     * Updates ticket details and available actions for the current selection.
+     *
+     * @param ticket the selected ticket, or null to clear the details
+     */
     private void showTicket(ParkingTicket ticket) {
         if (ticket == null) {
             lblSelectedTicket.setText("Ningún tiquete seleccionado");
@@ -219,10 +248,18 @@ public class PaymentController {
         btnPay.setDisable(ticket.getStatus() != TicketStatus.CLOSED);
     }
 
+    /**
+     * Refreshes the table from the current parking service data.
+     */
     private void refreshTable() {
         tblTickets.getItems().setAll(service.getPendingPaymentTickets());
     }
 
+    /**
+     * Selects a ticket in the table if its number is present.
+     *
+     * @param ticketNumber the number of the ticket to select
+     */
     private void selectTicket(int ticketNumber) {
         for (ParkingTicket ticket : tblTickets.getItems()) {
             if (ticket.getNumber() == ticketNumber) {
@@ -232,6 +269,12 @@ public class PaymentController {
         }
     }
 
+    /**
+     * Converts a domain state to its Spanish display label.
+     *
+     * @param status the state to display
+     * @return the Spanish state label
+     */
     private String toSpanish(TicketStatus status) {
         switch (status) {
             case CLOSED:
@@ -244,6 +287,11 @@ public class PaymentController {
         }
     }
 
+    /**
+     * Opens the dashboard view.
+     *
+     * @throws IOException if the destination FXML view cannot be loaded
+     */
     @FXML
     private void goBack() throws IOException {
         App.setRoot("dashboard");

@@ -5,11 +5,21 @@
 package una.cr.proyecto2_paradigmas_gestionparqueo;
 
 /**
+ * Lists the vehicle categories supported by parking spaces.
  *
  * @author mcfra
  */
 public enum SpaceType {
+    /**
+     * Space for a motorcycle.
+     */
     MOTORCYCLE,
+    /**
+     * Space for a car.
+     */
     CAR,
+    /**
+     * Space for a cargo vehicle.
+     */
     CARGO
 }

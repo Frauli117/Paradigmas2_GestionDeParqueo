@@ -11,6 +11,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
+/**
+ * Handles vehicle entry forms and displays active parking tickets.
+ */
 public class EntryController {
 
     private static final DateTimeFormatter DATE_FORMAT =
@@ -41,6 +44,9 @@ public class EntryController {
     @FXML
     private TableColumn<ParkingTicket, String> colEntry;
 
+    /**
+     * Initializes view controls and displays the current service data.
+     */
     @FXML
     private void initialize() {
         cmbVehicleType.setItems(FXCollections.observableArrayList(
@@ -62,6 +68,10 @@ public class EntryController {
         refreshTable();
     }
 
+    /**
+     * Registers the vehicle entered in the form and refreshes active tickets.
+     * Displays a warning if the form or parking assignment is invalid.
+     */
     @FXML
     private void registerEntry() {
         try {
@@ -81,6 +91,12 @@ public class EntryController {
         }
     }
 
+    /**
+     * Creates a vehicle using the selected category and entered form values.
+     *
+     * @return the vehicle described by the form
+     * @throws IllegalArgumentException if no category is selected or a required vehicle field is null or blank
+     */
     private Vehicle createVehicle() {
         String type = cmbVehicleType.getValue();
         String plate = txtPlate.getText();
@@ -103,6 +119,9 @@ public class EntryController {
         }
     }
 
+    /**
+     * Clears vehicle fields, selects the default vehicle type, and focuses the plate field.
+     */
     private void clearForm() {
         txtPlate.clear();
         txtBrand.clear();
@@ -112,10 +131,19 @@ public class EntryController {
         txtPlate.requestFocus();
     }
 
+    /**
+     * Refreshes the table from the current parking service data.
+     */
     private void refreshTable() {
         tblActiveTickets.getItems().setAll(service.getActiveTickets());
     }
 
+    /**
+     * Converts a domain value to its Spanish display label.
+     *
+     * @param type the space category to display
+     * @return the Spanish category label
+     */
     private String toSpanish(SpaceType type) {
         switch (type) {
             case MOTORCYCLE:
@@ -128,6 +156,11 @@ public class EntryController {
         }
     }
 
+    /**
+     * Opens the dashboard view.
+     *
+     * @throws IOException if the destination FXML view cannot be loaded
+     */
     @FXML
     private void goBack() throws IOException {
         App.setRoot("dashboard");

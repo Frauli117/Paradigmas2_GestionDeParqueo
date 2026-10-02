@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="App" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1574.0" yPosition="60.0">
+      <Fields>
+        <Field name="scene" type="Scene" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="setRoot" returnType="void" visibility="package" isStatic="true">
+          <Argument type="String" name="fxml"/>
+        </Method>
+        <Method name="loadFXML" returnType="Parent" visibility="private" isStatic="true">
+          <Argument type="String" name="fxml"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Car" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1416.0" yPosition="1898.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="licensePlate"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="String" name="model"/>
+          <Argument type="String" name="color"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRequiredSpaceType" returnType="SpaceType" visibility="public"/>
+        <Method name="getHourlyRate" returnType="int" visibility="public"/>
+        <Method name="getDailyMaximum" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CardPayment" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1831.0" yPosition="2159.0">
+      <Fields>
+        <Field name="authorizationCode" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="authorizationCode"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calculateAdjustment" returnType="long" visibility="protected">
+          <Argument type="long" name="baseAmount"/>
+        </Method>
+        <Method name="validatePayment" returnType="boolean" visibility="public">
+          <Argument type="long" name="totalAmount"/>
+        </Method>
+        <Method name="getAuthorizationCode" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CargoVehicle" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2096.0" yPosition="1639.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="licensePlate"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="String" name="model"/>
+          <Argument type="String" name="color"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRequiredSpaceType" returnType="SpaceType" visibility="public"/>
+        <Method name="getHourlyRate" returnType="int" visibility="public"/>
+        <Method name="getDailyMaximum" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CashPayment" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2214.0" yPosition="2243.0">
+      <Fields>
+        <Field name="amountReceived" type="long" visibility="private" isFinal="true"/>
+        <Field name="change" type="long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="long" name="amountReceived"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calculateAdjustment" returnType="long" visibility="protected">
+          <Argument type="long" name="baseAmount"/>
+        </Method>
+        <Method name="validatePayment" returnType="boolean" visibility="public">
+          <Argument type="long" name="totalAmount"/>
+        </Method>
+        <Method name="getAmountReceived" returnType="long" visibility="public"/>
+        <Method name="getChange" returnType="long" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DashboardController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2926.0" yPosition="256.0">
+      <Fields>
+        <Field name="service" type="ParkingService" visibility="private" isFinal="true"/>
+        <Field name="lblAvailable" type="Label" visibility="private"/>
+        <Field name="lblOccupied" type="Label" visibility="private"/>
+        <Field name="lblOutOfService" type="Label" visibility="private"/>
+        <Field name="lblActiveTickets" type="Label" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="private"/>
+        <Method name="refreshSummary" returnType="void" visibility="private"/>
+        <Method name="openEntry" returnType="void" visibility="private"/>
+        <Method name="openPayment" returnType="void" visibility="private"/>
+        <Method name="openSpaces" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="EntryController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1278.0" yPosition="395.0">
+      <Fields>
+        <Field name="DATE_FORMAT" type="DateTimeFormatter" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="service" type="ParkingService" visibility="private" isFinal="true"/>
+        <Field name="cmbVehicleType" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="txtPlate" type="TextField" visibility="private"/>
+        <Field name="txtBrand" type="TextField" visibility="private"/>
+        <Field name="txtModel" type="TextField" visibility="private"/>
+        <Field name="txtColor" type="TextField" visibility="private"/>
+        <Field name="tblActiveTickets" type="TableView&lt;ParkingTicket&gt;" visibility="private"/>
+        <Field name="colTicket" type="TableColumn&lt;ParkingTicket, Number&gt;" visibility="private"/>
+        <Field name="colPlate" type="TableColumn&lt;ParkingTicket, String&gt;" visibility="private"/>
+        <Field name="colType" type="TableColumn&lt;ParkingTicket, String&gt;" visibility="private"/>
+        <Field name="colSpace" type="TableColumn&lt;ParkingTicket, String&gt;" visibility="private"/>
+        <Field name="colEntry" type="TableColumn&lt;ParkingTicket, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="private"/>
+        <Method name="registerEntry" returnType="void" visibility="private"/>
+        <Method name="createVehicle" returnType="Vehicle" visibility="private"/>
+        <Method name="clearForm" returnType="void" visibility="private"/>
+        <Method name="refreshTable" returnType="void" visibility="private"/>
+        <Method name="toSpanish" returnType="String" visibility="private">
+          <Argument type="SpaceType" name="type"/>
+        </Method>
+        <Method name="goBack" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Motorcycle" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1625.0" yPosition="591.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="licensePlate"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="String" name="model"/>
+          <Argument type="String" name="color"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRequiredSpaceType" returnType="SpaceType" visibility="public"/>
+        <Method name="getHourlyRate" returnType="int" visibility="public"/>
+        <Method name="getDailyMaximum" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ParkingRateRules" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2453.0" yPosition="489.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="calculateAmount" returnType="long" visibility="public">
+          <Argument type="Vehicle" name="vehicle"/>
+          <Argument type="long" name="chargedHours"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ParkingService" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" isFinal="true" xPosition="3113.0" yPosition="603.0">
+      <Fields>
+        <Field name="INSTANCE" type="ParkingService" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="spaces" type="List&lt;ParkingSpace&gt;" visibility="private" isFinal="true"/>
+        <Field name="tickets" type="List&lt;ParkingTicket&gt;" visibility="private" isFinal="true"/>
+        <Field name="rateRules" type="ParkingRateRules" visibility="private" isFinal="true"/>
+        <Field name="nextTicketNumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="ParkingService" visibility="public" isStatic="true"/>
+        <Method name="createDefaultSpaces" returnType="void" visibility="private"/>
+        <Method name="registerEntry" returnType="ParkingTicket" visibility="public" isSynchronized="true">
+          <Argument type="Vehicle" name="vehicle"/>
+        </Method>
+        <Method name="closeTicket" returnType="ParkingTicket" visibility="public" isSynchronized="true">
+          <Argument type="int" name="ticketNumber"/>
+        </Method>
+        <Method name="processPayment" returnType="long" visibility="public" isSynchronized="true">
+          <Argument type="int" name="ticketNumber"/>
+          <Argument type="PaymentMethod" name="paymentMethod"/>
+        </Method>
+        <Method name="markSpaceOutOfService" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="spaceNumber"/>
+        </Method>
+        <Method name="returnSpaceToService" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="int" name="spaceNumber"/>
+        </Method>
+        <Method name="findTicket" returnType="Optional&lt;ParkingTicket&gt;" visibility="public" isSynchronized="true">
+          <Argument type="int" name="ticketNumber"/>
+        </Method>
+        <Method name="getActiveTickets" returnType="List&lt;ParkingTicket&gt;" visibility="public" isSynchronized="true"/>
+        <Method name="getPendingPaymentTickets" returnType="List&lt;ParkingTicket&gt;" visibility="public" isSynchronized="true"/>
+        <Method name="getTickets" returnType="List&lt;ParkingTicket&gt;" visibility="public" isSynchronized="true"/>
+        <Method name="getSpaces" returnType="List&lt;ParkingSpace&gt;" visibility="public" isSynchronized="true"/>
+        <Method name="countSpaces" returnType="long" visibility="public" isSynchronized="true">
+          <Argument type="SpaceStatus" name="status"/>
+        </Method>
+        <Method name="countTickets" returnType="long" visibility="public" isSynchronized="true">
+          <Argument type="TicketStatus" name="status"/>
+        </Method>
+        <Method name="requireTicket" returnType="ParkingTicket" visibility="private">
+          <Argument type="int" name="ticketNumber"/>
+        </Method>
+        <Method name="requireSpace" returnType="ParkingSpace" visibility="private">
+          <Argument type="int" name="spaceNumber"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ParkingSpace" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="3085.0" yPosition="1308.0">
+      <Fields>
+        <Field name="number" type="int" visibility="private" isFinal="true"/>
+        <Field name="identifier" type="String" visibility="private" isFinal="true"/>
+        <Field name="type" type="SpaceType" visibility="private" isFinal="true"/>
+        <Field name="status" type="SpaceStatus" visibility="private"/>
+        <Field name="assignedVehicle" type="Vehicle" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="number"/>
+          <Argument type="String" name="identifier"/>
+          <Argument type="SpaceType" name="type"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="canAssign" returnType="boolean" visibility="public">
+          <Argument type="Vehicle" name="vehicle"/>
+        </Method>
+        <Method name="occupy" returnType="void" visibility="package">
+          <Argument type="Vehicle" name="vehicle"/>
+        </Method>
+        <Method name="release" returnType="void" visibility="package"/>
+        <Method name="markOutOfService" returnType="void" visibility="public"/>
+        <Method name="returnToService" returnType="void" visibility="public"/>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="getIdentifier" returnType="String" visibility="public"/>
+        <Method name="getType" returnType="SpaceType" visibility="public"/>
+        <Method name="getStatus" returnType="SpaceStatus" visibility="public"/>
+        <Method name="getAssignedVehicle" returnType="Vehicle" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ParkingTicket" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="749.0" yPosition="984.0">
+      <Fields>
+        <Field name="number" type="int" visibility="private" isFinal="true"/>
+        <Field name="vehicle" type="Vehicle" visibility="private" isFinal="true"/>
+        <Field name="space" type="ParkingSpace" visibility="private" isFinal="true"/>
+        <Field name="entryTime" type="LocalDateTime" visibility="private" isFinal="true"/>
+        <Field name="exitTime" type="LocalDateTime" visibility="private"/>
+        <Field name="status" type="TicketStatus" visibility="private"/>
+        <Field name="chargedHours" type="long" visibility="private"/>
+        <Field name="amount" type="long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="int" name="number"/>
+          <Argument type="Vehicle" name="vehicle"/>
+          <Argument type="ParkingSpace" name="space"/>
+          <Argument type="LocalDateTime" name="entryTime"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="close" returnType="void" visibility="package">
+          <Argument type="LocalDateTime" name="exitTime"/>
+          <Argument type="ParkingRateRules" name="rateRules"/>
+        </Method>
+        <Method name="markPaid" returnType="void" visibility="package"/>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="getVehicle" returnType="Vehicle" visibility="public"/>
+        <Method name="getSpace" returnType="ParkingSpace" visibility="public"/>
+        <Method name="getEntryTime" returnType="LocalDateTime" visibility="public"/>
+        <Method name="getExitTime" returnType="LocalDateTime" visibility="public"/>
+        <Method name="getStatus" returnType="TicketStatus" visibility="public"/>
+        <Method name="getChargedHours" returnType="long" visibility="public"/>
+        <Method name="getAmount" returnType="long" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PaymentController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2108.0" yPosition="840.0">
+      <Fields>
+        <Field name="DATE_FORMAT" type="DateTimeFormatter" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="service" type="ParkingService" visibility="private" isFinal="true"/>
+        <Field name="tblTickets" type="TableView&lt;ParkingTicket&gt;" visibility="private"/>
+        <Field name="colTicket" type="TableColumn&lt;ParkingTicket, Number&gt;" visibility="private"/>
+        <Field name="colPlate" type="TableColumn&lt;ParkingTicket, String&gt;" visibility="private"/>
+        <Field name="colSpace" type="TableColumn&lt;ParkingTicket, String&gt;" visibility="private"/>
+        <Field name="colEntry" type="TableColumn&lt;ParkingTicket, String&gt;" visibility="private"/>
+        <Field name="colStatus" type="TableColumn&lt;ParkingTicket, String&gt;" visibility="private"/>
+        <Field name="lblSelectedTicket" type="Label" visibility="private"/>
+        <Field name="lblBaseAmount" type="Label" visibility="private"/>
+        <Field name="lblTotalAmount" type="Label" visibility="private"/>
+        <Field name="cmbPaymentType" type="ComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="lblData1" type="Label" visibility="private"/>
+        <Field name="lblData2" type="Label" visibility="private"/>
+        <Field name="txtData1" type="TextField" visibility="private"/>
+        <Field name="txtData2" type="TextField" visibility="private"/>
+        <Field name="btnCloseTicket" type="Button" visibility="private"/>
+        <Field name="btnPay" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="private"/>
+        <Method name="closeSelectedTicket" returnType="void" visibility="private"/>
+        <Method name="paySelectedTicket" returnType="void" visibility="private"/>
+        <Method name="createPaymentMethod" returnType="PaymentMethod" visibility="private"/>
+        <Method name="configurePaymentFields" returnType="void" visibility="private"/>
+        <Method name="showTicket" returnType="void" visibility="private">
+          <Argument type="ParkingTicket" name="ticket"/>
+        </Method>
+        <Method name="refreshTable" returnType="void" visibility="private"/>
+        <Method name="selectTicket" returnType="void" visibility="private">
+          <Argument type="int" name="ticketNumber"/>
+        </Method>
+        <Method name="toSpanish" returnType="String" visibility="private">
+          <Argument type="TicketStatus" name="status"/>
+        </Method>
+        <Method name="goBack" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="PaymentMethod" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" isAbstract="true" xPosition="2255.0" yPosition="1945.0">
+      <Fields>
+        <Field name="type" type="PaymentType" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="protected">
+          <Argument type="PaymentType" name="type"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getType" returnType="PaymentType" visibility="public" isFinal="true"/>
+        <Method name="calculateTotal" returnType="long" visibility="public" isFinal="true">
+          <Argument type="long" name="baseAmount"/>
+        </Method>
+        <Method name="calculateAdjustment" returnType="long" visibility="protected" isAbstract="true">
+          <Argument type="long" name="baseAmount"/>
+        </Method>
+        <Method name="validatePayment" returnType="boolean" visibility="public" isAbstract="true">
+          <Argument type="long" name="totalAmount"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SinpeMobilePayment" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2605.0" yPosition="2183.0">
+      <Fields>
+        <Field name="phoneNumber" type="String" visibility="private" isFinal="true"/>
+        <Field name="referenceNumber" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="phoneNumber"/>
+          <Argument type="String" name="referenceNumber"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calculateAdjustment" returnType="long" visibility="protected">
+          <Argument type="long" name="baseAmount"/>
+        </Method>
+        <Method name="validatePayment" returnType="boolean" visibility="public">
+          <Argument type="long" name="totalAmount"/>
+        </Method>
+        <Method name="getPhoneNumber" returnType="String" visibility="public"/>
+        <Method name="getReferenceNumber" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SpacesController" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2682.0" yPosition="1652.0">
+      <Fields>
+        <Field name="service" type="ParkingService" visibility="private" isFinal="true"/>
+        <Field name="tblSpaces" type="TableView&lt;ParkingSpace&gt;" visibility="private"/>
+        <Field name="colNumber" type="TableColumn&lt;ParkingSpace, Number&gt;" visibility="private"/>
+        <Field name="colIdentifier" type="TableColumn&lt;ParkingSpace, String&gt;" visibility="private"/>
+        <Field name="colType" type="TableColumn&lt;ParkingSpace, String&gt;" visibility="private"/>
+        <Field name="colStatus" type="TableColumn&lt;ParkingSpace, String&gt;" visibility="private"/>
+        <Field name="colVehicle" type="TableColumn&lt;ParkingSpace, String&gt;" visibility="private"/>
+        <Field name="lblAvailable" type="Label" visibility="private"/>
+        <Field name="lblOccupied" type="Label" visibility="private"/>
+        <Field name="lblOut" type="Label" visibility="private"/>
+        <Field name="btnOutOfService" type="Button" visibility="private"/>
+        <Field name="btnReturnToService" type="Button" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="private"/>
+        <Method name="markOutOfService" returnType="void" visibility="private"/>
+        <Method name="returnToService" returnType="void" visibility="private"/>
+        <Method name="refreshTable" returnType="void" visibility="private"/>
+        <Method name="updateButtons" returnType="void" visibility="private">
+          <Argument type="ParkingSpace" name="selected"/>
+        </Method>
+        <Method name="toSpanish" returnType="String" visibility="private">
+          <Argument type="SpaceType" name="type"/>
+        </Method>
+        <Method name="toSpanish" returnType="String" visibility="private">
+          <Argument type="SpaceStatus" name="status"/>
+        </Method>
+        <Method name="goBack" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="UiUtils" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" isFinal="true" xPosition="1936.0" yPosition="60.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="information" returnType="void" visibility="package" isStatic="true">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="warning" returnType="void" visibility="package" isStatic="true">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="error" returnType="void" visibility="package" isStatic="true">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="show" returnType="void" visibility="private" isStatic="true">
+          <Argument type="AlertType" name="type"/>
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="message"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vehicle" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" isAbstract="true" xPosition="1441.0" yPosition="1403.0">
+      <Fields>
+        <Field name="licensePlate" type="String" visibility="private" isFinal="true"/>
+        <Field name="brand" type="String" visibility="private" isFinal="true"/>
+        <Field name="model" type="String" visibility="private" isFinal="true"/>
+        <Field name="color" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="licensePlate"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="String" name="model"/>
+          <Argument type="String" name="color"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="requireText" returnType="String" visibility="private">
+          <Argument type="String" name="value"/>
+          <Argument type="String" name="fieldName"/>
+        </Method>
+        <Method name="getLicensePlate" returnType="String" visibility="public"/>
+        <Method name="getBrand" returnType="String" visibility="public"/>
+        <Method name="getModel" returnType="String" visibility="public"/>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="getRequiredSpaceType" returnType="SpaceType" visibility="public" isAbstract="true"/>
+        <Method name="getHourlyRate" returnType="int" visibility="public" isAbstract="true"/>
+        <Method name="getDailyMaximum" returnType="int" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Enum name="PaymentType" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1873.0" yPosition="1945.0">
+      <Literals>
+        <Literal name="CASH"/>
+        <Literal name="CARD"/>
+        <Literal name="SINPE_MOBILE"/>
+      </Literals>
+    </Enum>
+    <Enum name="SpaceStatus" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="3548.0" yPosition="1487.0">
+      <Literals>
+        <Literal name="AVAILABLE"/>
+        <Literal name="OCCUPIED"/>
+        <Literal name="OUT_OF_SERVICE"/>
+      </Literals>
+    </Enum>
+    <Enum name="SpaceType" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="2136.0" yPosition="500.0">
+      <Literals>
+        <Literal name="MOTORCYCLE"/>
+        <Literal name="CAR"/>
+        <Literal name="CARGO"/>
+      </Literals>
+    </Enum>
+    <Enum name="TicketStatus" package="una.cr.proyecto2_paradigmas_gestionparqueo" visibility="public" xPosition="1017.0" yPosition="1606.0">
+      <Literals>
+        <Literal name="ACTIVE"/>
+        <Literal name="CLOSED"/>
+        <Literal name="PAID"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tblActiveTickets" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tblSpaces" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.CardPayment" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod"/>
+    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.DashboardController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colStatus" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colType" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.Motorcycle" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.Car" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle"/>
+    <HasRelation name="colTicket" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="status" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.Car" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.Motorcycle" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingRateRules" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colEntry" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colEntry" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colType" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.CargoVehicle" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.CashPayment" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod"/>
+    <HasRelation name="colStatus" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colIdentifier" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="type" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colNumber" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tblTickets" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colSpace" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colVehicle" source="una.cr.proyecto2_paradigmas_gestionparqueo.SpacesController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="assignedVehicle" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vehicle" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="service" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.CargoVehicle" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="status" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingRateRules" target="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="rateRules" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingRateRules" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colTicket" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="spaces" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ParkingSpace&gt;"/>
+    <HasRelation name="colPlate" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="una.cr.proyecto2_paradigmas_gestionparqueo.SinpeMobilePayment" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod"/>
+    <HasRelation name="colSpace" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="space" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentController" target="una.cr.proyecto2_paradigmas_gestionparqueo.TicketStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="colPlate" source="una.cr.proyecto2_paradigmas_gestionparqueo.EntryController" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="type" source="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentMethod" target="una.cr.proyecto2_paradigmas_gestionparqueo.PaymentType" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tickets" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ParkingTicket&gt;"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.Vehicle" target="una.cr.proyecto2_paradigmas_gestionparqueo.SpaceType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="INSTANCE" source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingService" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingTicket" target="una.cr.proyecto2_paradigmas_gestionparqueo.ParkingSpace" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

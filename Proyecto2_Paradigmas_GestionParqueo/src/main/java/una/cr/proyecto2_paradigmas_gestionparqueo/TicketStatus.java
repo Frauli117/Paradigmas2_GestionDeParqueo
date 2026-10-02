@@ -5,11 +5,21 @@
 package una.cr.proyecto2_paradigmas_gestionparqueo;
 
 /**
+ * Lists the stages of a parking ticket.
  *
  * @author mcfra
  */
 public enum TicketStatus {
+    /**
+     * Open parking stay with no calculated exit charge.
+     */
     ACTIVE,
+    /**
+     * Stay closed and charge calculated, awaiting payment.
+     */
     CLOSED,
+    /**
+     * Payment registered for the closed stay.
+     */
     PAID
 }

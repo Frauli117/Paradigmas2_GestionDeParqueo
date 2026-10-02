@@ -9,6 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+/**
+ * Displays parking spaces and handles changes to their service availability.
+ */
 public class SpacesController {
 
     private final ParkingService service = ParkingService.getInstance();
@@ -36,6 +39,9 @@ public class SpacesController {
     @FXML
     private Button btnReturnToService;
 
+    /**
+     * Initializes view controls and displays the current service data.
+     */
     @FXML
     private void initialize() {
         colNumber.setCellValueFactory(data ->
@@ -61,6 +67,10 @@ public class SpacesController {
         updateButtons(null);
     }
 
+    /**
+     * Takes the selected available space out of service and refreshes the view.
+     * Displays a warning if the selection or state change is invalid.
+     */
     @FXML
     private void markOutOfService() {
         ParkingSpace selected = tblSpaces.getSelectionModel().getSelectedItem();
@@ -78,6 +88,10 @@ public class SpacesController {
         }
     }
 
+    /**
+     * Returns the selected space to service and refreshes the view.
+     * Displays a warning if the selection or state change is invalid.
+     */
     @FXML
     private void returnToService() {
         ParkingSpace selected = tblSpaces.getSelectionModel().getSelectedItem();
@@ -95,6 +109,9 @@ public class SpacesController {
         }
     }
 
+    /**
+     * Refreshes the table from the current parking service data.
+     */
     private void refreshTable() {
         tblSpaces.getItems().setAll(service.getSpaces());
         lblAvailable.setText(String.valueOf(service.countSpaces(SpaceStatus.AVAILABLE)));
@@ -103,6 +120,11 @@ public class SpacesController {
         updateButtons(tblSpaces.getSelectionModel().getSelectedItem());
     }
 
+    /**
+     * Enables service actions according to the selected space state.
+     *
+     * @param selected the selected space, or null if none is selected
+     */
     private void updateButtons(ParkingSpace selected) {
         boolean available = selected != null && selected.getStatus() == SpaceStatus.AVAILABLE;
         boolean out = selected != null && selected.getStatus() == SpaceStatus.OUT_OF_SERVICE;
@@ -110,6 +132,12 @@ public class SpacesController {
         btnReturnToService.setDisable(!out);
     }
 
+    /**
+     * Converts a domain value to its Spanish display label.
+     *
+     * @param type the space category to display
+     * @return the Spanish category label
+     */
     private String toSpanish(SpaceType type) {
         switch (type) {
             case MOTORCYCLE:
@@ -122,6 +150,12 @@ public class SpacesController {
         }
     }
 
+    /**
+     * Converts a domain state to its Spanish display label.
+     *
+     * @param status the state to display
+     * @return the Spanish state label
+     */
     private String toSpanish(SpaceStatus status) {
         switch (status) {
             case OCCUPIED:
@@ -134,6 +168,11 @@ public class SpacesController {
         }
     }
 
+    /**
+     * Opens the dashboard view.
+     *
+     * @throws IOException if the destination FXML view cannot be loaded
+     */
     @FXML
     private void goBack() throws IOException {
         App.setRoot("dashboard");
